@@ -34,7 +34,9 @@ displayItem();
 updateLayout();
 console.log(ticTacToeLayout);
 function game() {
+  let jogadas = 0;
   while (i >= 1) {
+    jogadas++;
     console.log(`selecione a linha e a coluna, sendo de 1 a 3 para colunas, de A a c para linas e x ou o
       ex: 1a x`);
     selecao = prompt();
@@ -182,31 +184,7 @@ function game() {
       ticTacToe[2][0] != undefined
     ) {
       console.log(ticTacToe[2][2], "ganhou!"), (i = 0);
-    } else if (
-      ticTacToe[0][0] != ticTacToe[0][1] &&
-      ticTacToe[0][1] != ticTacToe[0][2] &&
-      ticTacToe[0][2] != ticTacToe[1][0] &&
-      ticTacToe[1][0] != ticTacToe[1][1] &&
-      ticTacToe[1][1] != ticTacToe[1][2] &&
-      ticTacToe[1][2] != ticTacToe[2][0] &&
-      ticTacToe[2][0] != ticTacToe[2][1] &&
-      ticTacToe[2][1] != ticTacToe[2][2] &&
-      ticTacToe[2][2] != ticTacToe[2][0] &&
-      ticTacToe[2][0] != ticTacToe[1][1] &&
-      ticTacToe[1][1] != ticTacToe[0][2] &&
-      ticTacToe[0][2] != ticTacToe[2][2] &&
-      ticTacToe[2][2] != ticTacToe[1][1] &&
-      ticTacToe[1][1] != ticTacToe[0][0] &&
-      ticTacToe[0][0] != undefined &&
-      ticTacToe[0][1] != undefined &&
-      ticTacToe[0][2] != undefined &&
-      ticTacToe[1][0] != undefined &&
-      ticTacToe[1][1] != undefined &&
-      ticTacToe[1][2] != undefined &&
-      ticTacToe[2][0] != undefined &&
-      ticTacToe[2][1] != undefined &&
-      ticTacToe[2][2] != undefined
-    ) {
+    } else if (jogadas >= 9) {
       console.log("Velha"), (i = 0);
     }
   }
