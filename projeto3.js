@@ -71,6 +71,68 @@ function game() {
       updateLayout();
       console.log(ticTacToeLayout);
     }
+    if (selecao == "2a x" && ticTacToe[1][0] == undefined) {
+      (ticTacToe[1][0] = "x"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "2a o" && ticTacToe[1][0] == undefined) {
+      (ticTacToe[1][0] = "o"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+
+    if (selecao == "2b x" && ticTacToe[1][1] == undefined) {
+      (ticTacToe[1][1] = "x"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "2b o" && ticTacToe[1][1] == undefined) {
+      (ticTacToe[1][1] = "o"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "2c x" && ticTacToe[1][2] == undefined) {
+      (ticTacToe[1][2] = "x"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "2c o" && ticTacToe[1][2] == undefined) {
+      (ticTacToe[1][2] = "o"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "3a x" && ticTacToe[2][0] == undefined) {
+      (ticTacToe[2][0] = "x"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "3a o" && ticTacToe[2][0] == undefined) {
+      (ticTacToe[2][0] = "o"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+
+    if (selecao == "3b x" && ticTacToe[2][1] == undefined) {
+      (ticTacToe[2][1] = "x"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "3b o" && ticTacToe[2][1] == undefined) {
+      (ticTacToe[2][1] = "o"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "3c x" && ticTacToe[2][2] == undefined) {
+      (ticTacToe[2][2] = "x"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
+    if (selecao == "3c o" && ticTacToe[2][2] == undefined) {
+      (ticTacToe[2][2] = "o"), displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
+    }
 
     if (
       ticTacToe[0][0] == ticTacToe[0][1] &&
@@ -78,6 +140,74 @@ function game() {
       ticTacToe[0][0] != undefined
     ) {
       console.log(ticTacToe[0][0], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[1][0] == ticTacToe[1][1] &&
+      ticTacToe[1][1] == ticTacToe[1][2] &&
+      ticTacToe[1][0] != undefined
+    ) {
+      console.log(ticTacToe[1][0], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[2][0] == ticTacToe[2][1] &&
+      ticTacToe[2][1] == ticTacToe[2][2] &&
+      ticTacToe[2][0] != undefined
+    ) {
+      console.log(ticTacToe[2][0], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[0][0] == ticTacToe[1][0] &&
+      ticTacToe[1][0] == ticTacToe[2][0] &&
+      ticTacToe[0][0] != undefined
+    ) {
+      console.log(ticTacToe[0][0], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[0][1] == ticTacToe[1][1] &&
+      ticTacToe[1][1] == ticTacToe[2][1] &&
+      ticTacToe[0][1] != undefined
+    ) {
+      console.log(ticTacToe[0][1], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[0][2] == ticTacToe[1][2] &&
+      ticTacToe[1][2] == ticTacToe[2][2] &&
+      ticTacToe[0][2] != undefined
+    ) {
+      console.log(ticTacToe[0][2], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[2][0] == ticTacToe[1][1] &&
+      ticTacToe[1][1] == ticTacToe[0][2] &&
+      ticTacToe[2][0] != undefined
+    ) {
+      console.log(ticTacToe[2][0], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[2][2] == ticTacToe[1][1] &&
+      ticTacToe[1][1] == ticTacToe[0][0] &&
+      ticTacToe[2][0] != undefined
+    ) {
+      console.log(ticTacToe[2][2], "ganhou!"), (i = 0);
+    } else if (
+      ticTacToe[0][0] != ticTacToe[0][1] &&
+      ticTacToe[0][1] != ticTacToe[0][2] &&
+      ticTacToe[0][2] != ticTacToe[1][0] &&
+      ticTacToe[1][0] != ticTacToe[1][1] &&
+      ticTacToe[1][1] != ticTacToe[1][2] &&
+      ticTacToe[1][2] != ticTacToe[2][0] &&
+      ticTacToe[2][0] != ticTacToe[2][1] &&
+      ticTacToe[2][1] != ticTacToe[2][2] &&
+      ticTacToe[2][2] != ticTacToe[2][0] &&
+      ticTacToe[2][0] != ticTacToe[1][1] &&
+      ticTacToe[1][1] != ticTacToe[0][2] &&
+      ticTacToe[0][2] != ticTacToe[2][2] &&
+      ticTacToe[2][2] != ticTacToe[1][1] &&
+      ticTacToe[1][1] != ticTacToe[0][0] &&
+      ticTacToe[0][0] != undefined &&
+      ticTacToe[0][1] != undefined &&
+      ticTacToe[0][2] != undefined &&
+      ticTacToe[1][0] != undefined &&
+      ticTacToe[1][1] != undefined &&
+      ticTacToe[1][2] != undefined &&
+      ticTacToe[2][0] != undefined &&
+      ticTacToe[2][1] != undefined &&
+      ticTacToe[2][2] != undefined
+    ) {
+      console.log("Velha"), (i = 0);
     }
   }
 }
