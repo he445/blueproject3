@@ -238,5 +238,5 @@ function game() {
 game();
 displayItem();
 updateLayout();
-
+console.log();
 console.log(ticTacToeLayout);
