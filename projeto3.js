@@ -5,6 +5,8 @@ ticTacToe[2][2] = undefined;
 let ticTacToeLayout = "";
 let i = 1;
 let item;
+let player1 = 0;
+let player2 = 0;
 function updateLayout() {
   ticTacToeLayout = `${displayItem(ticTacToe[0][0])} | ${displayItem(
     ticTacToe[0][1]
@@ -18,15 +20,7 @@ ${displayItem(ticTacToe[2][0])} | ${displayItem(
     ticTacToe[2][1]
   )} | ${displayItem(ticTacToe[2][2])}`;
 }
-//[0][0]=1a
-//[0][1]=1b
-//[0][2]=1c
-//[1][0]=2a
-//[1][1]=2b
-//[1][2]=2c
-//[2][0]=3a
-//[2][1]=3b
-//[2][2]=3c
+
 function displayItem(item) {
   return item === undefined ? " " : item;
 }
@@ -142,48 +136,96 @@ function game() {
       ticTacToe[0][0] != undefined
     ) {
       console.log(ticTacToe[0][0], "ganhou!"), (i = 0);
+      if (ticTacToe[0][0] == "x") {
+        player1++;
+      } else if (ticTacToe[0][0] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[1][0] == ticTacToe[1][1] &&
       ticTacToe[1][1] == ticTacToe[1][2] &&
       ticTacToe[1][0] != undefined
     ) {
       console.log(ticTacToe[1][0], "ganhou!"), (i = 0);
+      if (ticTacToe[1][0] == "x") {
+        player1++;
+      } else if (ticTacToe[1][0] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[2][0] == ticTacToe[2][1] &&
       ticTacToe[2][1] == ticTacToe[2][2] &&
       ticTacToe[2][0] != undefined
     ) {
       console.log(ticTacToe[2][0], "ganhou!"), (i = 0);
+      if (ticTacToe[2][0] == "x") {
+        player1++;
+      } else if (ticTacToe[2][0] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[0][0] == ticTacToe[1][0] &&
       ticTacToe[1][0] == ticTacToe[2][0] &&
       ticTacToe[0][0] != undefined
     ) {
       console.log(ticTacToe[0][0], "ganhou!"), (i = 0);
+      if (ticTacToe[0][0] == "x") {
+        player1++;
+      } else if (ticTacToe[0][0] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[0][1] == ticTacToe[1][1] &&
       ticTacToe[1][1] == ticTacToe[2][1] &&
       ticTacToe[0][1] != undefined
     ) {
       console.log(ticTacToe[0][1], "ganhou!"), (i = 0);
+      if (ticTacToe[0][1] == "x") {
+        player1++;
+      } else if (ticTacToe[0][1] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[0][2] == ticTacToe[1][2] &&
       ticTacToe[1][2] == ticTacToe[2][2] &&
       ticTacToe[0][2] != undefined
     ) {
       console.log(ticTacToe[0][2], "ganhou!"), (i = 0);
+      if (ticTacToe[0][2] == "x") {
+        player1++;
+      } else if (ticTacToe[0][2] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[2][0] == ticTacToe[1][1] &&
       ticTacToe[1][1] == ticTacToe[0][2] &&
       ticTacToe[2][0] != undefined
     ) {
       console.log(ticTacToe[2][0], "ganhou!"), (i = 0);
+      if (ticTacToe[2][0] == "x") {
+        player1++;
+      } else if (ticTacToe[2][0] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (
       ticTacToe[2][2] == ticTacToe[1][1] &&
       ticTacToe[1][1] == ticTacToe[0][0] &&
       ticTacToe[2][0] != undefined
     ) {
       console.log(ticTacToe[2][2], "ganhou!"), (i = 0);
+      if (ticTacToe[2][2] == "x") {
+        player1++;
+      } else if (ticTacToe[2][2] == "o") {
+        player2++;
+      }
+      console.log("Jogador 1", player1, "Jogador 2", player2);
     } else if (jogadas >= 9) {
       displayItem();
       updateLayout();
