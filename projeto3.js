@@ -185,6 +185,9 @@ function game() {
     ) {
       console.log(ticTacToe[2][2], "ganhou!"), (i = 0);
     } else if (jogadas >= 9) {
+      displayItem();
+      updateLayout();
+      console.log(ticTacToeLayout);
       console.log("Velha"), (i = 0);
     }
   }
