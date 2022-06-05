@@ -3,7 +3,6 @@ const prompt = require("prompt-sync")();
 let ticTacToe = [[], [], []];
 ticTacToe[2][2] = undefined;
 let ticTacToeLayout = "";
-let i = 1;
 let item;
 let player1 = 0;
 let player2 = 0;
@@ -30,12 +29,11 @@ updateLayout();
 console.log(ticTacToeLayout);
 function game() {
   for (let i = 1; i > 0; ) {
-    let rodadas = i;
     console.log("selecione as rodadas");
-    rodadas = +prompt();
+    i = +prompt();
     let jogadas = 0;
     while (i > 0) {
-      console.log(i, rodadas);
+      console.log(i);
       jogadas++;
       console.log(`selecione a linha e a coluna, sendo de 1 a 3 para colunas, de A a c para linas e x ou o
       ex: 1a x`);
@@ -141,13 +139,14 @@ function game() {
         ticTacToe[0][1] == ticTacToe[0][2] &&
         ticTacToe[0][0] != undefined
       ) {
-        console.log(ticTacToe[0][0], "ganhou!"), (i = 0);
+        console.log(ticTacToe[0][0], "ganhou!");
         if (ticTacToe[0][0] == "x") {
           player1++;
-          rodadas--;
+          i--;
+          console.log(i);
         } else if (ticTacToe[0][0] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -155,13 +154,13 @@ function game() {
         ticTacToe[1][1] == ticTacToe[1][2] &&
         ticTacToe[1][0] != undefined
       ) {
-        console.log(ticTacToe[1][0], "ganhou!"), (i = 0);
+        console.log(ticTacToe[1][0], "ganhou!");
         if (ticTacToe[1][0] == "x") {
           player1++;
-          rodadas--;
+          i--;
         } else if (ticTacToe[1][0] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -169,13 +168,13 @@ function game() {
         ticTacToe[2][1] == ticTacToe[2][2] &&
         ticTacToe[2][0] != undefined
       ) {
-        console.log(ticTacToe[2][0], "ganhou!"), (i = 0);
+        console.log(ticTacToe[2][0], "ganhou!");
         if (ticTacToe[2][0] == "x") {
           player1++;
-          rodadas--;
+          i--;
         } else if (ticTacToe[2][0] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -183,13 +182,13 @@ function game() {
         ticTacToe[1][0] == ticTacToe[2][0] &&
         ticTacToe[0][0] != undefined
       ) {
-        console.log(ticTacToe[0][0], "ganhou!"), (i = 0);
+        console.log(ticTacToe[0][0], "ganhou!");
         if (ticTacToe[0][0] == "x") {
           player1++;
-          rodadas++;
+          i--;
         } else if (ticTacToe[0][0] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -197,13 +196,13 @@ function game() {
         ticTacToe[1][1] == ticTacToe[2][1] &&
         ticTacToe[0][1] != undefined
       ) {
-        console.log(ticTacToe[0][1], "ganhou!"), (i = 0);
+        console.log(ticTacToe[0][1], "ganhou!");
         if (ticTacToe[0][1] == "x") {
           player1++;
-          rodadas--;
+          i--;
         } else if (ticTacToe[0][1] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -211,13 +210,13 @@ function game() {
         ticTacToe[1][2] == ticTacToe[2][2] &&
         ticTacToe[0][2] != undefined
       ) {
-        console.log(ticTacToe[0][2], "ganhou!"), (i = 0);
+        console.log(ticTacToe[0][2], "ganhou!");
         if (ticTacToe[0][2] == "x") {
           player1++;
-          rodadas--;
+          i--;
         } else if (ticTacToe[0][2] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -228,10 +227,10 @@ function game() {
         console.log(ticTacToe[2][0], "ganhou!"), (i = 0);
         if (ticTacToe[2][0] == "x") {
           player1++;
-          rodadas++;
+          i--;
         } else if (ticTacToe[2][0] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
@@ -239,21 +238,20 @@ function game() {
         ticTacToe[1][1] == ticTacToe[0][0] &&
         ticTacToe[2][0] != undefined
       ) {
-        console.log(ticTacToe[2][2], "ganhou!"), (i = 0);
+        console.log(ticTacToe[2][2], "ganhou!");
         if (ticTacToe[2][2] == "x") {
           player1++;
-          rodadas--;
+          i--;
         } else if (ticTacToe[2][2] == "o") {
           player2++;
-          rodadas--;
+          i--;
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (jogadas >= 9) {
         displayItem();
         updateLayout();
         console.log(ticTacToeLayout);
-        console.log("Velha"), (i = 0);
-        rodadas--;
+        console.log("Velha"), i--;
       }
     }
   }
