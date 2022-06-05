@@ -143,6 +143,8 @@ function game() {
         if (ticTacToe[0][0] == "x") {
           player1++;
           i--;
+          ticTacToe = [[], [], []];
+          console.log(ticTacToe[0]);
           console.log(i);
         } else if (ticTacToe[0][0] == "o") {
           player2++;
@@ -158,6 +160,10 @@ function game() {
         if (ticTacToe[1][0] == "x") {
           player1++;
           i--;
+          (ticTacToe[0] = undefined),
+            (ticTacToe[1] = undefined),
+            (ticTacToe[2] = undefined);
+          console.log(ticTacToe[0]);
         } else if (ticTacToe[1][0] == "o") {
           player2++;
           i--;
@@ -200,9 +206,17 @@ function game() {
         if (ticTacToe[0][1] == "x") {
           player1++;
           i--;
+          (ticTacToe[0] = undefined),
+            (ticTacToe[1] = undefined),
+            (ticTacToe[2] = undefined);
+          console.log(ticTacToe[0]);
         } else if (ticTacToe[0][1] == "o") {
           player2++;
           i--;
+          (ticTacToe[0] = undefined),
+            (ticTacToe[1] = undefined),
+            (ticTacToe[2] = undefined);
+          console.log(ticTacToe[(0, 1, 2)]);
         }
         console.log("Jogador 1", player1, "Jogador 2", player2);
       } else if (
