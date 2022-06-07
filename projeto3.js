@@ -33,7 +33,7 @@ function game() {
     console.log("selecione as rodadas");
     i = +prompt();
     let jogadas = 0;
-    if (repete == "sim") {
+    if (repete.toLowerCase() == "sim") {
       while (i > 0) {
         console.log(i);
         jogadas++;
@@ -41,96 +41,96 @@ function game() {
       ex: 1a x`);
         selecao = prompt();
 
-        if (selecao == "1a x" && ticTacToe[0][0] == undefined) {
+        if (selecao.toLowerCase() == "1a x" && ticTacToe[0][0] == undefined) {
           (ticTacToe[0][0] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "1a o" && ticTacToe[0][0] == undefined) {
+        if (selecao.toLowerCase() == "1a o" && ticTacToe[0][0] == undefined) {
           (ticTacToe[0][0] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
 
-        if (selecao == "1b x" && ticTacToe[0][1] == undefined) {
+        if (selecao.toLowerCase() == "1b x" && ticTacToe[0][1] == undefined) {
           (ticTacToe[0][1] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "1b o" && ticTacToe[0][1] == undefined) {
+        if (selecao.toLowerCase() == "1b o" && ticTacToe[0][1] == undefined) {
           (ticTacToe[0][1] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
 
-        if (selecao == "1c x" && ticTacToe[0][2] == undefined) {
+        if (selecao.toLowerCase() == "1c x" && ticTacToe[0][2] == undefined) {
           (ticTacToe[0][2] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "1c o" && ticTacToe[0][2] == undefined) {
+        if (selecao.toLowerCase() == "1c o" && ticTacToe[0][2] == undefined) {
           (ticTacToe[0][2] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "2a x" && ticTacToe[1][0] == undefined) {
+        if (selecao.toLowerCase() == "2a x" && ticTacToe[1][0] == undefined) {
           (ticTacToe[1][0] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "2a o" && ticTacToe[1][0] == undefined) {
+        if (selecao.toLowerCase() == "2a o" && ticTacToe[1][0] == undefined) {
           (ticTacToe[1][0] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
 
-        if (selecao == "2b x" && ticTacToe[1][1] == undefined) {
+        if (selecao.toLowerCase() == "2b x" && ticTacToe[1][1] == undefined) {
           (ticTacToe[1][1] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "2b o" && ticTacToe[1][1] == undefined) {
+        if (selecao.toLowerCase() == "2b o" && ticTacToe[1][1] == undefined) {
           (ticTacToe[1][1] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "2c x" && ticTacToe[1][2] == undefined) {
+        if (selecao.toLowerCase() == "2c x" && ticTacToe[1][2] == undefined) {
           (ticTacToe[1][2] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "2c o" && ticTacToe[1][2] == undefined) {
+        if (selecao.toLowerCase() == "2c o" && ticTacToe[1][2] == undefined) {
           (ticTacToe[1][2] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "3a x" && ticTacToe[2][0] == undefined) {
+        if (selecao.toLowerCase() == "3a x" && ticTacToe[2][0] == undefined) {
           (ticTacToe[2][0] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "3a o" && ticTacToe[2][0] == undefined) {
+        if (selecao.toLowerCase() == "3a o" && ticTacToe[2][0] == undefined) {
           (ticTacToe[2][0] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
 
-        if (selecao == "3b x" && ticTacToe[2][1] == undefined) {
+        if (selecao.toLowerCase() == "3b x" && ticTacToe[2][1] == undefined) {
           (ticTacToe[2][1] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "3b o" && ticTacToe[2][1] == undefined) {
+        if (selecao.toLowerCase() == "3b o" && ticTacToe[2][1] == undefined) {
           (ticTacToe[2][1] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "3c x" && ticTacToe[2][2] == undefined) {
+        if (selecao.toLowerCase() == "3c x" && ticTacToe[2][2] == undefined) {
           (ticTacToe[2][2] = "x"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
         }
-        if (selecao == "3c o" && ticTacToe[2][2] == undefined) {
+        if (selecao.toLowerCase() == "3c o" && ticTacToe[2][2] == undefined) {
           (ticTacToe[2][2] = "o"), displayItem();
           updateLayout();
           console.log(ticTacToeLayout);
@@ -281,7 +281,7 @@ function game() {
     }
     console.log("hahaha, isso foi divertido. Deseja jogar de novo?");
     repete = prompt();
-    if (repete == "sim") {
+    if (repete.toLowerCase() == "sim") {
       (i = 1), (player1 = 0), (player1 = 0);
     } else {
       console.log("ok, até mais");
