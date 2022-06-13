@@ -54,7 +54,7 @@ function game() {
       while (i > 0) {
         console.log(i);
         jogadas++;
-        console.log(`selecione a linha e a coluna, sendo de 1 a 3 para colunas, de A a c para linas e x ou o
+        console.log(`selecione a linha e a coluna, sendo de 1 a 3 para linhas, de A a c para colunas e x ou o
       ex: 1a x`);
         selecao = prompt();
 
@@ -183,6 +183,7 @@ function game() {
           console.log(ticTacToeLayout);
         } else {
           console.log("opção invalida");
+          jogadas--;
         }
 
         if (
